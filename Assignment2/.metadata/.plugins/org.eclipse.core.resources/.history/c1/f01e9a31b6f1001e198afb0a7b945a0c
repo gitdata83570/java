@@ -1,0 +1,85 @@
+//Q1. Create a class called Invoice that a hardware store might use to represent an invoice for an item
+//sold at the store. An Invoice should include four pieces of information as fields—a part number
+//(type String), a part description (type String), a quantity of the item being purchased (type int) and a
+//price per item (double). Your class should have a constructor
+//that initializes the four instance variables. Provide a set and a get method for each instance variable.
+//calculates the invoice amount (i.e. multiplies the quantity by the price per item), then returns the
+//amount as a double value.
+//If the quantity is not positive, it should be set to 0.
+//If the price per item is not positive, it should be set to 0.0.
+//Write a test application named InvoiceTest that demonstrate class Invoice’s capabilities.
+//public class Asgn2_1 {
+class Invoice
+{
+	private String partno;
+	private String Description;
+	private int item;
+	private double prize;
+	
+	Invoice()
+	{
+		 partno="1";
+		 Description="partno";
+		 item=101;
+		 prize=1.1;
+	}
+
+
+public Invoice(String partno, String description, int item, double prize) 	
+	{
+		super();
+		this.partno = partno;
+		Description = description;
+		this.item = item;
+		this.prize = prize;
+	}
+
+
+public String getPartno() 
+	{
+		return partno;
+	}
+	public void setPartno(String partno) 
+	{
+		this.partno = partno;
+	}
+	public String getDescription() 
+	{
+		return Description;
+	}
+	public void setDescription(String description) 
+	{
+		Description = description;
+	}
+	public int getItem() 
+	{
+		return item;
+	}
+	public void setItem(int item) 
+	{
+		if(item<0)
+			item=0;
+		this.item = item;
+	}
+	public double getPrize() 
+	{
+		return prize;
+	}
+	public void setPrize(double prize) 
+	{
+		if(prize<0.0)
+			prize=0.0;
+		this.prize = prize;
+	}
+
+
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Invoice i1=new Invoice();
+		i1.setItem(1);
+		i1.setPrize(1);
+	}
+
+}

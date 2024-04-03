@@ -1,0 +1,21 @@
+package com.sunbeam.tester;
+
+import com.sunbeam.invoice.Invoice;
+
+public class InvoiceTester {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Invoice i1=new Invoice();
+		System.out.println("Part no:"+i1.getPartno());
+	//	System.out.println("Part no:"+i1.setPartno());
+		System.out.println("Description:"+i1.getDescription());
+	//	System.out.println("Description:"+i1.setDescription());
+		System.out.println("Quantity:"+i1.getQuantity());
+		System.out.println("Prize:"+i1.getPrize());
+		
+		
+	}
+
+}
